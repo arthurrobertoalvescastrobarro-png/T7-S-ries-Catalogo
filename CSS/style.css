@@ -1,0 +1,818 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(135deg, #111, #1b1b1b, #222);
+    box-shadow: 0 4px 15px rgba(0,0,0,.5);
+}
+
+.logo-art7 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold;
+    text-shadow:
+        0 0 10px gold,
+        0 0 20px gold;
+}
+
+/* =========================
+   USUÁRIO LOGADO
+========================= */
+
+.usuario-box,
+#usuarioLogadoTexto {
+    display: inline-block;
+    background: #198754;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   BUSCA
+========================= */
+
+#campobusca {
+    border-radius: 30px;
+    padding: 12px 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(255,255,255,.15);
+}
+
+#campobusca:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255,255,255,.4);
+}
+
+/* =========================
+   LOGIN E CADASTRO
+========================= */
+
+.auth-card,
+#areaAutenticacao {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.4);
+}
+
+#areaAutenticacao input {
+    border-radius: 10px;
+}
+
+/* =========================
+   FILTROS
+========================= */
+
+.filtros {
+    margin-bottom: 25px;
+}
+
+.filtros h3 {
+    margin-bottom: 15px;
+}
+
+.filtros button {
+    margin: 5px;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.filtros button:hover {
+    transform: translateY(-2px);
+}
+
+.filtros button.active,
+.categorias-container button.active {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px gold;
+    border: 2px solid gold;
+    font-weight: bold;
+}
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.carrossel-wrapper {
+    overflow: hidden;
+}
+
+.categorias-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.categorias-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.categorias-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+
+.resultado-box {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-filme {
+    background: #1e1e1e;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: .3s;
+
+    height: 100%;
+}
+
+.card-filme:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.5);
+}
+
+.card-filme img {
+    height: 420px;
+    object-fit: cover;
+
+    transition: .4s;
+}
+
+.card-filme:hover img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    color: white;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: .95rem;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.categoria {
+    display: inline-block;
+    background: #343a40;
+    color: white;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    margin: 2px;
+
+    font-size: 0.8rem;
+}
+
+/* =========================
+   CLASSIFICAÇÃO
+========================= */
+
+.classificacao {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.idade-10 {
+    background: #00a651;
+}
+
+.idade-12 {
+    background: #f7d100;
+    color: black;
+}
+
+.idade-14 {
+    background: #ff7f00;
+}
+
+.idade-16 {
+    background: #e60000;
+}
+
+.idade-18 {
+    background: #000;
+}
+
+
+.idade-livre {
+    background: #2ecc71;
+    color: white;
+    font-weight: bold;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-art7 {
+    margin-top: 50px;
+    padding: 20px;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode {
+    background: #03595c;
+    color: #222;
+}
+
+.dark-mode header {
+    background: linear-gradient(
+        135deg,
+        #de0a0a,
+        #212529,
+        #eede02
+    );
+}
+
+.dark-mode .card-filme {
+    background: white;
+    color: #222;
+}
+
+.dark-mode .card-body {
+    color: #222;
+}
+
+.dark-mode .categoria {
+    background: #ddd;
+    color: black;
+}
+
+.dark-mode .footer-art7 {
+    background: #ddd;
+    color: black;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+    .logo-art7 {
+        font-size: 2rem;
+    }
+
+    #campobusca {
+        width: 100% !important;
+    }
+
+    .card-filme img {
+        height: 350px;
+    }
+
+    .auth-card,
+    #areaAutenticacao {
+        width: 95%;
+    }
+}
+
+.categoria-crime {
+    background-color: #800020;
+    color: white;
+    border: none;
+}
+
+.categoria-crime:hover {
+    background-color: #660019;
+}
+
+.categoria-gospel {
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+}
+
+.categoria-gospel:hover {
+    background-color: #e6c200;
+}
+
+.nota{
+    color: gold;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comentarios {
+    margin-top: 10px;
+    max-height: 100px;
+    overflow-y: auto;
+    border-top: 1px solid #444;
+    padding-top: 5px;
+}
+
+.comentarios div {
+    margin-bottom: 4px;
+}
+
+/* =========================
+   RECOMENDAÇÕES
+========================= */
+
+#secaoRecomendacoes {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+#secaoRecomendacoes h2 {
+    color: gold;
+    font-weight: bold;
+}
+
+.card-recomendacao {
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+    height: 100%;
+}
+
+.card-recomendacao:hover {
+    transform: scale(1.03);
+}
+
+.card-recomendacao img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-recomendacao .info {
+    padding: 10px;
+}
+
+.card-recomendacao h5 {
+    color: white;
+}
+
+/* =========================
+   CONTINUE ASSISTINDO
+========================= */
+
+#secaoContinuarAssistindo {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.card-continuar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    background: #1e1e1e;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    padding: 15px;
+}
+
+.card-continuar img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-continuar h3 {
+    color: gold;
+}
+
+.card-continuar p {
+    color: #ddd;
+}
+
+.card-continuar .btn {
+    margin-top: 10px;
+}
+
+/* =========================
+   CARROSSEL CONTINUAR
+========================= */
+
+#conteudoContinuar {
+
+    display: flex;
+
+    gap: 15px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+    scroll-behavior: smooth;
+}
+
+#conteudoContinuar::-webkit-scrollbar {
+    height: 8px;
+}
+
+#conteudoContinuar::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+}
+
+.card-continuar-mini {
+
+    min-width: 220px;
+
+    max-width: 220px;
+
+    background: #1e1e1e;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding-bottom: 10px;
+
+    transition: .3s;
+}
+
+.card-continuar-mini:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.4);
+}
+
+.card-continuar-mini img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.card-continuar-mini h5 {
+
+    padding: 10px;
+
+    color: white;
+
+    font-size: 1rem;
+}
+
+.card-continuar-mini small {
+
+    color: #aaa;
+
+    display: block;
+
+    padding: 0 10px;
+}
+
+/* =========================
+   CARROSSEL RECOMENDAÇÕES
+========================= */
+
+#ListaRecomendacoes {
+
+    display: flex;
+
+    gap: 15px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+    scroll-behavior: smooth;
+}
+
+#ListaRecomendacoes::-webkit-scrollbar {
+    height: 8px;
+}
+
+#ListaRecomendacoes::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+}
+
+.card-recomendacao {
+
+    min-width: 220px;
+
+    max-width: 220px;
+
+    background: #1e1e1e;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: .3s;
+}
+
+.card-recomendacao:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.4);
+}
+
+.card-recomendacao img {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+}
+
+.card-recomendacao .info {
+
+    padding: 10px;
+}
+
+.card-recomendacao h5 {
+
+    color: white;
+
+    min-height: 50px;
+}
+
+/* =====================================
+   RESPONSIVIDADE ART7
+===================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .logo-art7 {
+        font-size: 2.5rem;
+    }
+
+    #campobusca {
+        width: 100% !important;
+    }
+
+    .card-filme img {
+        height: 360px;
+    }
+
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    .logo-art7 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Busca */
+
+    .d-flex.gap-2.mt-3.justify-content-center {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #campobusca {
+        width: 100% !important;
+    }
+
+    /* Botões superiores */
+
+    .d-flex.justify-content-between.mt-3 {
+
+        display: flex !important;
+        flex-wrap: wrap !important;
+
+        justify-content: center !important;
+
+        gap: 10px;
+    }
+
+    .d-flex.justify-content-between.mt-3 .btn {
+
+        width: calc(50% - 5px);
+    }
+
+    /* Filtros */
+
+    .filtros {
+        text-align: center;
+    }
+
+    .filtros .btn {
+        margin: 4px;
+    }
+
+    /* Categorias */
+
+    .categorias-container {
+
+        display: flex;
+
+        overflow-x: auto;
+
+        gap: 8px;
+
+        padding-bottom: 10px;
+    }
+
+    .categorias-container .btn {
+
+        white-space: nowrap;
+
+        flex-shrink: 0;
+    }
+
+    /* Contador e ordenação */
+
+    .d-flex.justify-content-between.align-items-center.mb-4 {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    #ordenacao {
+
+        width: 100% !important;
+    }
+
+    /* Cards */
+
+    .card-filme img {
+
+        height: 320px;
+    }
+
+    .card-body h3 {
+
+        font-size: 1.1rem;
+    }
+
+    .card-body p {
+
+        font-size: .9rem;
+    }
+
+    /* Continue Assistindo */
+
+    .card-continuar {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .card-continuar img {
+
+        width: 100%;
+
+        max-width: 250px;
+
+        height: auto;
+    }
+
+    /* Login */
+
+    .auth-card,
+    #areaAutenticacao {
+
+        width: 100%;
+
+        padding: 15px;
+    }
+
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 480px) {
+
+    .logo-art7 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .d-flex.justify-content-between.mt-3 .btn {
+
+        width: 100%;
+    }
+
+    .btn {
+
+        font-size: .9rem;
+    }
+
+    .card-filme img {
+
+        height: 280px;
+    }
+
+    .footer-art7 {
+
+        font-size: .85rem;
+    }
+
+}
